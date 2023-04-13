@@ -13,4 +13,4 @@ def solution(x: np.array, y: np.array) -> bool:
     m="rbf"
     g=1
     pval=MMD(compute_kernel=m, gamma=g).test(x,y).pvalue
-    return p_value < alpha # Ваш ответ, True или False
+    return True if pval < alpha else False # Ваш ответ, True или False
